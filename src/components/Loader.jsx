@@ -1,11 +1,9 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import "./Loader.css";
 
 const Loader = ({ onFinish }) => {
-    useEffect(() => {
-        setTimeout(onFinish, 4000); // Oculta el loader después de 4s
-    }, [onFinish]);
+    const [typingCompleted, setTypingCompleted] = useState(false);
 
     return (
         <div className="loader-container">
@@ -18,6 +16,10 @@ const Loader = ({ onFinish }) => {
                     typeSpeed={70}
                     deleteSpeed={50}
                     delaySpeed={1000}
+                    onLoopDone={() => {
+                        setTypingCompleted(true);
+                        setTimeout(onFinish, 1000); // Da un margen de 1s después del tipeo
+                    }}
                 />
             </h1>
         </div>
@@ -25,3 +27,7 @@ const Loader = ({ onFinish }) => {
 };
 
 export default Loader;
+
+
+
+
