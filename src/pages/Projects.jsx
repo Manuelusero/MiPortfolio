@@ -6,27 +6,27 @@ const projects = [
         title: "Replica chat de whatsapp",
         category: "Desarrollo de frontend y backend",
         link: "https://whatsapp-clone-frontend-lilac.vercel.app",
-        image: "src/assets/captura-whatsapp.png",
+        image: "public/captura-whatsapp.png",
 
     },
     {
         title: "Replica de frontend de whatsapp",
         category: "Desarrollo de frontend con react",
         link: "https://clonemsguserdeish24.netlify.app",
-        image: "src/assets/front-whatsapp.png",
+        image: "public/front-whatsapp.png",
     },
 
     {
         title: "Mi portfolio",
         category: "Desarrollo con react",
         link: "#",
-        image: "src/assets/miPortfolio.png",
+        image: "public/miPortfolio.png",
     },
     {
         title: "Proyecto GreenRouse",
         category: "Desarrollo con HTML y CSS",
         link: "#",
-        image: "src/assets/Greenrouse.png",
+        image: "public/Greenrouse.png",
     },
 ];
 
