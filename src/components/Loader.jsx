@@ -11,7 +11,7 @@ const Loader = ({ onFinish }) => {
             1000 +                        // Delay antes del borrado
             (50 * "Cargando...".length) + // Tiempo de borrado de "Cargando..."
             1000 +                        // Delay antes de escribir "Bienvenido a mi portafolio!"
-            (70 * "Bienvenido a mi portafolio!".length) + // Tiempo de tipeo de la segunda frase
+            (100 * "Bienvenido a mi portafolio!".length) + // Tiempo de tipeo de la segunda frase
             1000;                         // Espera final antes de ocultar
 
         const timeout = setTimeout(() => {
