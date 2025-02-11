@@ -25,11 +25,11 @@ const Loader = ({ onFinish }) => {
         <div className="loader-container">
             <h1 className="typing-effect">
                 <Typewriter
-                    words={["Cargando...", "Bienvenido a mi portafolio!"]}
+                    words={["Bienvenido...", "A mi portafolio!"]}
                     loop={1}
                     cursor
                     cursorStyle="|"
-                    typeSpeed={70}
+                    typeSpeed={100}
                     deleteSpeed={50}
                     delaySpeed={1000}
                 />
