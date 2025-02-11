@@ -1,0 +1,59 @@
+.About {
+    font-family: Poppins, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 40px; /* Margen superior agregado */
+    text-align: center;
+}
+
+/* Contenedor principal responsivo */
+.parent-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Texto responsivo */
+.parent-container p {
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #3d3d3d;
+}
+
+/* Media queries para hacer el diseño responsivo */
+@media (max-width: 768px) {
+    .About {
+        font-size: 36px; /* Reduce tamaño del título en pantallas pequeñas */
+        text-align: center; /* Centra el texto en móviles */
+    }
+
+    .parent-container {
+        padding: 15px;
+    }
+
+    .parent-container p {
+        font-size: 16px; /* Reduce el tamaño del texto en pantallas pequeñas */
+        text-align: justify;
+    }
+}
+
+@media (max-width: 480px) {
+    .About {
+        font-size: 28px; /* Más pequeño en móviles */
+        margin-top: 20px; /* Reduce margen en pantallas más pequeñas */
+    }
+
+    .parent-container {
+        padding: 10px;
+    }
+
+    .parent-container p {
+        font-size: 14px; /* Aún más pequeño en móviles */
+    }
+}

@@ -1,0 +1,103 @@
+.skills-container {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: right;
+    padding: 0 20px;
+    /* border: 2px solid #ccc; */
+    background-color: var(--buttons-colors);
+}
+
+h2 {
+    font-weight: normal;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 16px; /* Ajuste del tamaño del texto */
+}
+
+.progress {
+    flex: 1;
+    height: 6px; /* Hacer las barras más visibles */
+    background: #ddd;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+.expert {
+    width: 100%;
+}
+.proficient {
+    width: 70%;
+}
+.novice {
+    width: 40%;
+}
+
+.level {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+/* 📌 Responsividad Mejorada */
+@media (max-width: 768px) {
+    .skills-container {
+        max-width: 100%;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .skill {
+        flex-direction: row; /* Mantiene la estructura en móviles */
+        justify-content: space-between;
+        font-size: 14px; /* Reduce tamaño en pantallas chicas */
+    }
+
+    .progress {
+        width: 60%; /* Ajusta la barra de progreso */
+        height: 5px; /* Más gruesa para mejor visibilidad */
+    }
+
+    .level {
+        font-size: 12px; /* Texto más pequeño */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        padding: 0 10px;
+    }
+
+    .skill {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .progress {
+        width: 50%; /* Reduce el tamaño para no ocupar todo */
+    }
+
+    .level {
+        font-size: 12px;
+    }
+}

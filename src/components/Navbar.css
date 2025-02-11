@@ -1,0 +1,101 @@
+/* ======== NAVBAR GENERAL ======== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--buttons-colors);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* ======== MENÚ DE NAVEGACIÓN ======== */
+.links {
+    display: none; /* 🔹 Ocultar menú por defecto en móviles */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco con opacidad */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 8px;
+}
+
+/* 🔹 Mostrar menú cuando se activa con el botón */
+.links.show {
+    display: flex;
+}
+
+/* 🔹 Estilos de los enlaces */
+.link {
+    padding: 12px 0;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* ======== ICONOS DE REDES SOCIALES ======== */
+.socialLinks {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+    gap: 10px;
+    margin-right: 35px;
+}
+
+.iconLink {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+/* ======== RESPONSIVE PARA MÓVILES ======== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* 🔹 Botón de menú hamburguesa */
+    .menu-toggle {
+        display: flex;
+        font-size: 26px;
+        cursor: pointer;
+        position: absolute;
+        left: 20px; /* 🔥 Mueve el botón al margen izquierdo */
+        top: 15px;
+    }
+}
+
+/* ======== DISEÑO PARA PANTALLAS GRANDES ======== */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* 🔹 Ocultar botón hamburguesa en pantallas grandes */
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        transform: none;
+        justify-content: center; /* 🔥 Centra los links en pantallas grandes */
+        flex-grow: 1; /* 🔹 Permite que ocupen el espacio disponible */
+        gap: 30px;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* 🔹 Mantiene espaciado entre redes y links */
+    }
+}

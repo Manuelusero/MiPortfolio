@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #fefcfc;
+    --buttons-colors: #5c7347;
+    --font-colors: #ffffff;
+    --fonts-gral: "Poppins-Regular", sans-serif;
+    --fonts-bold: "Poppins-Bold", sans-serif;
+    --fonts-extrabold: "Poppins-ExtraBold", sans-serif;
+}
+body {
+    background-color: var(--primary-color);
+    color: var(--font-colors);
+}
