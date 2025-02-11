@@ -1,0 +1,20 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.typing-effect {
+    border-right: 3px solid white;
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
