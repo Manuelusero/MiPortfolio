@@ -4,7 +4,7 @@ const Conteiner = () => {
     return (
         <div className='container'>
             <div className='presentation'>
-                <h1 className='title'>Hola soy Manuel, </h1>
+                <h1 className='titleh1'>Hola soy Manuel, </h1>
                 <h2 className='subtitle'>Desarrollador Web Full Stack</h2>
                 {/* 🔹 Botón para descargar el CV */}
                 <a href="/mi-cv.pdf" target="_blank" rel="noopener noreferrer" className='cv-button'>

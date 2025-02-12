@@ -36,7 +36,7 @@ const ProjectCard = ({ title, category, link, image }) => {
             <div className="project-content">
                 <img src={image} alt={title} className="project-image" />
                 <p className="category">{category}</p>
-                <h3 className="title">{title}</h3>
+                <h3 className='title'>{title}</h3>
             </div>
         </a>
     );

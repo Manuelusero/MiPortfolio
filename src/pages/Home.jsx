@@ -9,7 +9,7 @@ import ScrollToTop from '../components/ScrollToTop'
 
 const Home = () => {
     return (
-        <div className='Home'>
+        <div id="home" className='Home'>
             <Navbar />
             <Conteiner />
             <About />
