@@ -7,7 +7,7 @@ const Loader = ({ onFinish }) => {
 
     useEffect(() => {
         if (typingFinished) {
-            const timeout = setTimeout(onFinish, 2000); // Agregamos un margen extra
+            const timeout = setTimeout(onFinish, 2000); // Pequeño margen extra
             return () => clearTimeout(timeout);
         }
     }, [typingFinished, onFinish]);
@@ -16,14 +16,14 @@ const Loader = ({ onFinish }) => {
         <div className="loader-container">
             <h1 className="typing-effect">
                 <Typewriter
-                    words={["Bienvenido...", "A mi portafolio!"]}
+                    words={["Cargando...", "Bienvenido a mi portafolio!"]}
                     loop={1}
                     cursor
                     cursorStyle="|"
                     typeSpeed={100}
                     deleteSpeed={50}
                     delaySpeed={1000}
-                    onLoopDone={() => setTypingFinished(true)} // Esperamos a que termine el tipeo
+                    onLoopDone={() => setTypingFinished(true)} // ✅ Esperamos a que termine
                 />
             </h1>
         </div>
@@ -31,3 +31,4 @@ const Loader = ({ onFinish }) => {
 };
 
 export default Loader;
+

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
 import Home from "./pages/Home";
@@ -9,14 +9,8 @@ import "./App.css";
 function App() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-  }, []);
-
   return loading ? (
-    <Loader />
+    <Loader onFinish={() => setLoading(false)} /> // ✅ Pasamos la función onFinish
   ) : (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -25,7 +19,5 @@ function App() {
     </Routes>
   );
 }
-
-
 
 export default App;
