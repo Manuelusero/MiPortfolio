@@ -25,7 +25,7 @@
     text-align: left;
     font-family: "Poppins-ExtraBold", sans-serif;
 }
-.title {
+.titleh1 {
     font-size: 28px;
     line-height: 42px;
     font-weight: 500;
@@ -101,7 +101,7 @@
         text-align: center;
     }
 
-    .title,
+    .titleh1,
     .subtitle {
         text-align: center;
     }
@@ -122,7 +122,7 @@
 }
 
 @media (max-width: 768px) {
-    .title {
+    .titleh1 {
         font-size: 22px;
     }
 
@@ -141,7 +141,7 @@
 }
 
 @media (max-width: 480px) {
-    .title {
+    .titleh1 {
         font-size: 20px;
     }
 
