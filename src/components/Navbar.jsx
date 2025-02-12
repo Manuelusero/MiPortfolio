@@ -15,9 +15,9 @@ const Navbar = () => {
 
             {/* Menú de navegación */}
             <div className={`links ${menuOpen ? "show" : ""}`}>
-                <Link to="/" className="link" onClick={() => setMenuOpen(false)}>Inicio</Link>
-                <Link to="/About" className="link" onClick={() => setMenuOpen(false)}>Sobre mí</Link>
-                <Link to="/Contact" className="link" onClick={() => setMenuOpen(false)}>Contacto</Link>
+                <Link to="/" className="link" onClick={() => setMenuOpen(false)}>INICIO</Link>
+                <Link to="/About" className="link" onClick={() => setMenuOpen(false)}>SOBRE MI</Link>
+                <Link to="/Contact" className="link" onClick={() => setMenuOpen(false)}>CONTACTO</Link>
             </div>
 
             {/* Iconos de redes sociales */}

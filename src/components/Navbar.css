@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 48px;
     background-color: var(--buttons-colors);
     position: fixed;
     top: 0;
@@ -13,10 +14,12 @@
 
 /* ======== MENÚ DE NAVEGACIÓN ======== */
 .links {
+    color: var(--font-colors);
     display: none; /* 🔹 Ocultar menú por defecto en móviles */
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 12px;
+    right: 100px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -25,6 +28,7 @@
     text-align: center;
     padding: 10px 0;
     border-radius: 8px;
+    gap: 60px;
 }
 
 /* 🔹 Mostrar menú cuando se activa con el botón */
@@ -34,10 +38,10 @@
 
 /* 🔹 Estilos de los enlaces */
 .link {
+    color: var(--font-colors);
     padding: 12px 0;
     font-size: 18px;
     text-decoration: none;
-    color: black;
     font-weight: bold;
 }
 
@@ -47,14 +51,17 @@
     align-items: center;
     justify-content: flex-end;
     width: auto;
-    gap: 10px;
-    margin-right: 35px;
+    gap: 20px;
+    margin-right: 100px;
+    height: 24px;
 }
 
 .iconLink {
     text-decoration: none;
-    color: black;
+    color: var(--font-colors);
     font-size: 20px;
+    height: 24px;
+    gap: 20px;
 }
 
 /* ======== RESPONSIVE PARA MÓVILES ======== */
@@ -82,14 +89,15 @@
     }
 
     .links {
+        color: var(--font-colors);
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         position: static;
         width: auto;
         background: none;
         box-shadow: none;
         transform: none;
-        justify-content: center; /* 🔥 Centra los links en pantallas grandes */
+        padding-right: 95px;
         flex-grow: 1; /* 🔹 Permite que ocupen el espacio disponible */
         gap: 30px;
     }

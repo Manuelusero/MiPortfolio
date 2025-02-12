@@ -1,13 +1,15 @@
 :root {
-    --primary-color: #000000;
-    --secondary-color: #fefcfc;
-    --buttons-colors: #5c7347;
+    --primary-color: #262726;
+    --secondary-color: #669729;
+    --buttons-colors: #527c1d;
     --font-colors: #ffffff;
-    --fonts-gral: "Poppins-Regular", sans-serif;
-    --fonts-bold: "Poppins-Bold", sans-serif;
-    --fonts-extrabold: "Poppins-ExtraBold", sans-serif;
+    --fonts-gral: "Inter";
+    --secondary-fonts: "Poppins";
+    --fonts-bold: "Inter-Bold", sans-serif;
+    --fonts-extrabold: "Inter-ExtraBold", sans-serif;
 }
 body {
     background-color: var(--primary-color);
     color: var(--font-colors);
+    font-family: var(--fonts-gral);
 }

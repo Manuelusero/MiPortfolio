@@ -45,7 +45,7 @@ const ProjectCard = ({ title, category, link, image }) => {
 const Projects = () => {
     return (
         <div>
-            <h1>Proyectos</h1>
+            <h1 className="projects">proyectos.</h1>
             <div className="projects-container">
                 {projects.map((project, index) => (
                     <ProjectCard key={index} {...project} />

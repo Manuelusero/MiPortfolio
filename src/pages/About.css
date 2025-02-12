@@ -1,59 +1,73 @@
+/* Estilos generales */
 .About {
     font-family: Poppins, sans-serif;
-    font-size: 48px;
+    font-size: 64px; /* Más grande para que resalte */
     font-weight: 700;
     margin-bottom: 20px;
-    margin-top: 40px; /* Margen superior agregado */
-    text-align: center;
+    margin-top: 0; /* Elimina margen extra */
+    color: #7baf46; /* Verde similar al de la imagen */
+    text-align: left; /* Alineado a la izquierda */
 }
 
-/* Contenedor principal responsivo */
+/* Contenedor principal */
 .parent-container {
-    max-width: 800px;
+    max-width: 1240px; /* Ajustado según la imagen */
     margin: 0 auto;
-    padding: 120px;
-    text-align: center;
+    padding-top: 200px; /* Menos padding */
+    text-align: left; /* Alineado a la izquierda */
     display: flex;
     flex-direction: column;
 }
 
-/* Texto responsivo */
+/* Texto */
 .parent-container p {
     font-family: Poppins, sans-serif;
-    font-size: 18px;
+    font-size: 20px; /* Ligera mejora para mayor legibilidad */
     font-weight: 400;
-    line-height: 1.6;
-    color: #3d3d3d;
+    line-height: 1.8; /* Espaciado entre líneas más amplio */
+    color: #e0e0e0; /* Gris claro */
+    max-width: 900px; /* Limita el ancho del párrafo */
 }
 
-/* Media queries para hacer el diseño responsivo */
-@media (max-width: 768px) {
+/* Responsividad */
+@media (max-width: 1024px) {
     .About {
-        font-size: 36px; /* Reduce tamaño del título en pantallas pequeñas */
-        text-align: center; /* Centra el texto en móviles */
+        font-size: 48px; /* Reduce en pantallas medianas */
     }
 
     .parent-container {
-        padding: 15px;
+        padding: 40px;
     }
 
     .parent-container p {
-        font-size: 16px; /* Reduce el tamaño del texto en pantallas pequeñas */
-        text-align: justify;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .About {
+        font-size: 36px;
+    }
+
+    .parent-container {
+        padding: 30px;
+    }
+
+    .parent-container p {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
     .About {
-        font-size: 28px; /* Más pequeño en móviles */
-        margin-top: 20px; /* Reduce margen en pantallas más pequeñas */
+        font-size: 28px;
     }
 
     .parent-container {
-        padding: 10px;
+        padding: 20px;
     }
 
     .parent-container p {
-        font-size: 14px; /* Aún más pequeño en móviles */
+        font-size: 14px;
     }
 }
