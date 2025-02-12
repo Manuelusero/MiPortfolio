@@ -10,7 +10,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   const handleFinishLoading = () => {
-    console.log("✅ onFinish ejecutado, ocultando loader...");
+    console.log("✅ onFinish ejecutado correctamente.");
     setLoading(false);
   };
 
@@ -26,3 +26,4 @@ function App() {
 }
 
 export default App;
+

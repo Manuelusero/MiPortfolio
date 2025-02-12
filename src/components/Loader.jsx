@@ -1,16 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import "./Loader.css";
 
 const Loader = ({ onFinish }) => {
-    const [typingFinished, setTypingFinished] = useState(false);
-
     useEffect(() => {
-        if (typingFinished) {
-            console.log("⏳ Loader terminado, llamando a onFinish...");
-            setTimeout(onFinish, 1000); // Espera 1s y luego cambia la página
-        }
-    }, [typingFinished, onFinish]);
+        console.log("⏳ Loader iniciado...");
+        const timeout = setTimeout(() => {
+            console.log("✅ Tiempo completado, llamando a onFinish...");
+            onFinish(); // Aseguramos que se llama correctamente
+        }, 3000); // Espera 3 segundos tras iniciar
+
+        return () => clearTimeout(timeout); // Limpiamos para evitar errores
+    }, [onFinish]);
 
     return (
         <div className="loader-container">
@@ -22,10 +23,6 @@ const Loader = ({ onFinish }) => {
                     cursorStyle="|"
                     typeSpeed={100}
                     delaySpeed={1000}
-                    onLoopDone={() => {
-                        console.log("✅ Typewriter completado");
-                        setTypingFinished(true);
-                    }}
                 />
             </h1>
         </div>
