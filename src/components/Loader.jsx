@@ -8,8 +8,8 @@ const Loader = ({ onFinish }) => {
     useEffect(() => {
         if (typingFinished) {
             const timeout = setTimeout(() => {
-                onFinish(); // ✅ Llamamos a onFinish después del tiempo extra
-            }, 2000); // Pequeña espera antes de cambiar a la página principal
+                onFinish(); // ✅ Llamamos a onFinish después de que termine el texto
+            }, 1000); // Espera breve antes de redirigir
 
             return () => clearTimeout(timeout);
         }
@@ -19,18 +19,14 @@ const Loader = ({ onFinish }) => {
         <div className="loader-container">
             <h1 className="typing-effect">
                 <Typewriter
-                    words={["Bienvenido...", "A mi portafolio!"]}
+                    words={["Cargando..."]}
                     loop={1}
                     cursor
                     cursorStyle="|"
                     typeSpeed={100}
                     deleteSpeed={50}
                     delaySpeed={1000}
-                    onLoopDone={() => {
-                        if (!typingFinished) {
-                            setTypingFinished(true); // ✅ Aseguramos que se ejecute una sola vez
-                        }
-                    }}
+                    onLoopDone={() => setTypingFinished(true)} // ✅ Detecta cuando termina de escribir
                 />
             </h1>
         </div>

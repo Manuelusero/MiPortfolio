@@ -9,8 +9,12 @@ import "./App.css";
 function App() {
   const [loading, setLoading] = useState(true);
 
+  const handleFinishLoading = () => {
+    setLoading(false); // ✅ Cambia a la página principal cuando termine el loader
+  };
+
   return loading ? (
-    <Loader onFinish={() => setLoading(false)} /> // ✅ Pasamos la función onFinish
+    <Loader onFinish={handleFinishLoading} />
   ) : (
     <Routes>
       <Route path="/" element={<Home />} />
