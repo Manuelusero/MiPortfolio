@@ -10,7 +10,8 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   const handleFinishLoading = () => {
-    setLoading(false); // ✅ Cambia a la página principal cuando termine el loader
+    console.log("✅ onFinish ejecutado, ocultando loader...");
+    setLoading(false);
   };
 
   return loading ? (

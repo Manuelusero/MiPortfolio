@@ -7,11 +7,8 @@ const Loader = ({ onFinish }) => {
 
     useEffect(() => {
         if (typingFinished) {
-            const timeout = setTimeout(() => {
-                onFinish(); // ✅ Llamamos a onFinish después de que termine el texto
-            }, 1000); // Espera breve antes de redirigir
-
-            return () => clearTimeout(timeout);
+            console.log("⏳ Loader terminado, llamando a onFinish...");
+            setTimeout(onFinish, 1000); // Espera 1s y luego cambia la página
         }
     }, [typingFinished, onFinish]);
 
@@ -24,9 +21,11 @@ const Loader = ({ onFinish }) => {
                     cursor
                     cursorStyle="|"
                     typeSpeed={100}
-                    deleteSpeed={50}
                     delaySpeed={1000}
-                    onLoopDone={() => setTypingFinished(true)} // ✅ Detecta cuando termina de escribir
+                    onLoopDone={() => {
+                        console.log("✅ Typewriter completado");
+                        setTypingFinished(true);
+                    }}
                 />
             </h1>
         </div>
