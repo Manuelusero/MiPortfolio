@@ -1,4 +1,4 @@
-/* ======== NAVBAR GENERAL ======== */
+/* 
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -12,10 +12,10 @@
     z-index: 1000;
 }
 
-/* ======== MENÚ DE NAVEGACIÓN ======== */
+
 .links {
     color: var(--font-colors);
-    display: none; /* 🔹 Ocultar menú por defecto en móviles */
+    display: none; 
     flex-direction: column;
     position: absolute;
     top: 12px;
@@ -23,7 +23,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco con opacidad */
+    background-color: rgba(255, 255, 255, 0.95); 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 10px 0;
@@ -31,12 +31,11 @@
     gap: 60px;
 }
 
-/* 🔹 Mostrar menú cuando se activa con el botón */
 .links.show {
     display: flex;
 }
 
-/* 🔹 Estilos de los enlaces */
+
 .link {
     color: var(--font-colors);
     padding: 12px 0;
@@ -45,7 +44,6 @@
     font-weight: bold;
 }
 
-/* ======== ICONOS DE REDES SOCIALES ======== */
 .socialLinks {
     display: flex;
     align-items: center;
@@ -64,28 +62,27 @@
     gap: 20px;
 }
 
-/* ======== RESPONSIVE PARA MÓVILES ======== */
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         padding: 10px;
     }
 
-    /* 🔹 Botón de menú hamburguesa */
+    
     .menu-toggle {
         display: flex;
         font-size: 26px;
         cursor: pointer;
         position: absolute;
-        left: 20px; /* 🔥 Mueve el botón al margen izquierdo */
+        left: 20px; 
         top: 15px;
     }
 }
 
-/* ======== DISEÑO PARA PANTALLAS GRANDES ======== */
 @media (min-width: 769px) {
     .menu-toggle {
-        display: none; /* 🔹 Ocultar botón hamburguesa en pantallas grandes */
+        display: none; 
     }
 
     .links {
@@ -98,12 +95,91 @@
         box-shadow: none;
         transform: none;
         padding-right: 95px;
-        flex-grow: 1; /* 🔹 Permite que ocupen el espacio disponible */
+        flex-grow: 1; 
         gap: 30px;
     }
     .navbar {
         display: flex;
         align-items: center;
-        justify-content: space-between; /* 🔹 Mantiene espaciado entre redes y links */
+        justify-content: space-between;
+    }
+} */
+
+/* ======== RESETEO GENERAL ======== */
+
+/* ======== NAVBAR GENERAL ======== */
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* 🔥 Alinea los elementos a la derecha */
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: var(--buttons-colors);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+
+/* ======== ICONOS DE REDES SOCIALES ======== */
+.socialLinks {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px; /* 🔥 Espacio entre los enlaces y los iconos */
+}
+
+.iconLink {
+    text-decoration: none;
+    color: white !important; /* 🔥 Forzamos color blanco */
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.iconLink:hover {
+    color: #f1c40f;
+}
+
+/* ======== MENÚ DE ENLACES ======== */
+.links {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-right: 80px;
+}
+
+.link {
+    color: white !important; /* 🔥 Forzamos color blanco */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #f1c40f; /* 🔥 Color de hover */
+}
+
+/* ======== BOTÓN MENÚ HAMBURGUESA ======== */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: white;
+    z-index: 1100;
+}
+
+/* ======== MENÚ RESPONSIVO PARA MÓVILES ======== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 60px;
+        padding: 0 15px;
+        overflow-x: hidden;
     }
 }

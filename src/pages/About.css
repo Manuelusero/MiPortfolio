@@ -1,6 +1,6 @@
 /* Estilos generales */
 .About {
-    font-family: Poppins, sans-serif;
+    font-family: var(--fonts-gral);
     font-size: 64px; /* Más grande para que resalte */
     font-weight: 700;
     margin-bottom: 20px;

@@ -1,5 +1,5 @@
 .contact {
-    font-family: Poppins, sans-serif;
+    font-family: var(--fonts-gral);
     font-size: 64px;
     font-weight: 700;
     margin-bottom: 20px;

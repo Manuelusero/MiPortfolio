@@ -1,18 +1,26 @@
+@font-face {
+    font-family: "Aquire";
+    src: url(/fonts/AquireBold-8Ma60.otf) format("opentype");
+    font-weight: normal;
+}
 :root {
-    --primary-color: #262726;
+    --primary-color: #111113;
     --secondary-color: #669729;
     --buttons-colors: #527c1d;
     --font-colors: #ffffff;
-    --fonts-gral: "Inter";
+    --fonts-gral: "Aquire", sans-serif;
     --secondary-fonts: "Poppins";
     --fonts-bold: "Inter-Bold", sans-serif;
     --fonts-extrabold: "Inter-ExtraBold", sans-serif;
 }
-body {
-    background-color: var(--primary-color);
-    color: var(--font-colors);
-    font-family: var(--fonts-gral);
-}
+
+body,
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* 🔥 ¡No más scroll lateral! */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    color: var(--font-colors);
 }

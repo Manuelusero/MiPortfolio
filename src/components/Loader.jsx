@@ -17,7 +17,7 @@ const Loader = ({ onFinish }) => {
         <div className="loader-container">
             <h1 className="typing-effect">
                 <Typewriter
-                    words={["Cargando..."]}
+                    words={["Bienvenidos..."]}
                     loop={1}
                     cursor
                     cursorStyle="|"

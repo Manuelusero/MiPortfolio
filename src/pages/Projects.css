@@ -1,5 +1,5 @@
 .projects {
-    font-family: Poppins, sans-serif;
+    font-family: var(--fonts-gral);
     font-size: 64px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -49,6 +49,7 @@
 .project-image {
     width: 100%; /* Imagen ocupa todo el ancho */
     height: 70%;
+    min-height: 200px;
     object-fit: cover;
     border-radius: 10px; /* Bordes redondeados para estética */
 }
