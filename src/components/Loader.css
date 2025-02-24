@@ -8,6 +8,8 @@
     font-size: 2rem;
     font-weight: bold;
     font-family: var(--fonts-gral);
+    text-align: center;
+    padding: 0 20px;
 }
 .typing-effect {
     border-right: 3px solid white;
@@ -17,5 +19,16 @@
 @keyframes blink {
     50% {
         border-color: transparent;
+    }
+}
+@media (max-width: 375px) {
+    .loader-container {
+        font-size: 1.2rem; /* Reducir el tamaño del texto */
+        padding: 0 10px; /* Menos padding */
+    }
+
+    .typing-effect {
+        border-right: 2px solid white; /* Más delgado el cursor */
+        padding-right: 3px;
     }
 }

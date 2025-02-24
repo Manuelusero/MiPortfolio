@@ -1,52 +1,58 @@
+/* ======== CONTAINER GENERAL ======== */
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10%;
-    position: relative;
+    flex-wrap: wrap;
     width: 90%;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10% auto 0;
     padding: 0 2%;
-    flex-wrap: wrap;
 }
 
+/* ======== PRESENTACIÓN ======== */
 .presentation {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex: min-content;
+    flex: 1;
     min-width: 300px;
 }
 
+/* ======== TEXTOS ======== */
 .titleh1 {
     font-size: 28px;
     line-height: 42px;
     font-weight: 500;
     margin-bottom: 10px;
     font-family: var(--secondary-fonts);
-    height: 42px;
 }
 
 .subtitle {
-    font-size: 80px;
+    font-size: 70px;
     line-height: 85px;
     font-weight: 800;
     font-family: var(--fonts-gral);
-    margin-top: 0;
     margin-bottom: 5px;
 }
 
+.description {
+    width: 500px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+/* ======== BOTÓN CV ======== */
 .cv-button {
     display: inline-block;
     margin-top: 15px;
-    padding: 20px;
-    font-size: 20px;
+    padding: 15px 20px;
+    font-size: 18px;
     font-weight: bold;
     color: white;
     background-color: var(--secondary-color);
-    border: none;
     border-radius: 26px;
     text-decoration: none;
     transition: background 0.3s;
@@ -56,7 +62,7 @@
     background-color: #0056b3;
 }
 
-/* Contenedor de la imagen */
+/* ======== CONTENEDOR DE IMAGEN ======== */
 .img-container {
     position: relative;
     display: flex;
@@ -64,58 +70,35 @@
     justify-content: center;
     width: 400px;
     height: 400px;
+    flex-shrink: 0;
 }
 
-/* Círculo detrás de la imagen */
+/* ======== CÍRCULO DETRÁS DE LA IMAGEN ======== */
 .circle-background {
     position: absolute;
-    width: 550px;
+    width: 640px;
     height: 467px;
-    background-color: #527c1d; /* Color verde */
+    background-color: #527c1d;
     border-top-left-radius: 370px;
-    border-top-right-radius: 250px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    top: 50%; /* Lo mueve hacia abajo */
-    left: 70%;
+    border-top-right-radius: 20px;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0; /* Lo pone detrás de la imagen */
+    z-index: 0;
 }
 
-/* .circle::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 200%;
-    height: 100%;
-    background-color: #527c1d;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-} */
-
-/* Imagen de perfil */
+/* ======== IMAGEN DE PERFIL ======== */
 .img1 {
-    width: 78%;
+    width: 60%;
     height: auto;
     object-fit: cover;
     position: relative;
     z-index: 1;
-    margin-top: -86px;
+    margin-top: -29px;
+    margin-left: 100px;
 }
 
-.description {
-    right: 80px;
-    width: 500px;
-    font-size: 20px;
-    font-style: var(--secondary-fonts);
-    font-weight: 500;
-    line-height: 25px;
-    text-transform: uppercase;
-}
-
-/* MEDIA QUERIES PARA RESPONSIVE DESIGN */
+/* ======== RESPONSIVE DESIGN ======== */
 @media (max-width: 1024px) {
     .container {
         flex-direction: column;
@@ -123,70 +106,110 @@
         text-align: center;
     }
 
-    .presentation,
-    .img-container {
+    .presentation {
         align-items: center;
-        text-align: center;
     }
 
     .titleh1,
-    .subtitle {
+    .subtitle,
+    .description {
         text-align: center;
-    }
-
-    .img1 {
-        width: 250px;
-        height: 250px;
     }
 
     .description {
-        position: static;
-        text-align: center;
         width: 90%;
         max-width: 500px;
-        margin-top: 20px;
-        right: auto;
-        bottom: auto;
+    }
+
+    .img-container {
+        width: 320px;
+        height: 320px;
+    }
+
+    .circle-background {
+        width: 400px;
+        height: 350px;
     }
 }
 
 @media (max-width: 768px) {
     .titleh1 {
         font-size: 22px;
+        margin-top: 20px;
     }
 
     .subtitle {
-        font-size: 26px;
-    }
-
-    .img1 {
-        width: 220px;
-        height: 220px;
+        font-size: 36px;
+        line-height: 1.2;
+        /* margin-top: 0; */
+        margin-bottom: 5px;
     }
 
     .description {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .img1 {
+        width: 78%;
+        height: auto;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+        margin-top: -30px;
+        margin-left: 0px;
+    }
+
+    .img-container {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 30px;
+    }
+
+    .circle-background {
+        width: 300px;
+        height: 270px;
+    }
+    .cv-button {
+        margin-top: 20px; /* Agregar espacio para que no lo tape la imagen */
+        padding: 12px 16px;
         font-size: 16px;
-        line-height: 20px;
     }
 }
 
 @media (max-width: 480px) {
     .titleh1 {
         font-size: 20px;
+        margin-top: 40px;
     }
 
     .subtitle {
-        font-size: 24px;
-    }
-
-    .img1 {
-        width: 180px;
-        height: 180px;
+        font-size: 32px;
     }
 
     .description {
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 20px;
         width: 80%;
+    }
+
+    .cv-button {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+
+    .img1 {
+        width: 186px;
+    }
+
+    .img-container {
+        width: 200px;
+        height: 200px;
+        margin-top: 30px;
+    }
+
+    .circle-background {
+        width: 240px;
+        height: 210px;
     }
 }

@@ -17,14 +17,8 @@ const projects = [
     },
 
     {
-        title: "Mi portfolio",
-        category: "Desarrollo con react",
-        link: "#",
-        image: "/portfolio.png",
-    },
-    {
         title: "Proyecto GreenRouse",
-        category: "Desarrollo con HTML y CSS",
+        category: "Desarrollo con HTML y CSS , proximamente React",
         link: "#",
         image: "/proyectGreen.jpeg",
     },
