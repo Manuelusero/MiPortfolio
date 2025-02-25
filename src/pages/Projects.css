@@ -6,17 +6,17 @@
     color: #7baf46;
     text-align: left;
     line-height: 116px;
-    margin-left: 90px;
+    margin-left: 99px;
 }
 
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
-    gap: 30px; /* Espacio entre las tarjetas */
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas pequeñas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 30px;
     padding: 20px;
-    max-width: 800px; /* Evita que se extienda demasiado */
-    margin: 0 auto; /* Centra en la página */
-    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -28,26 +28,12 @@
     color: inherit;
     padding: 15px;
     transition: 0.3s;
-    aspect-ratio: 1 / 1;
-    min-width: 350px;
-    max-width: 100%;
+    width: 350px;
     height: auto;
-}
-
-.project-card:nth-child(1),
-.project-card:nth-child(2) {
-    grid-column: 1; /* Ambas en la primera columna */
-    justify-self: start;
-}
-
-/* La tercera tarjeta desplazada a la derecha */
-.project-card:nth-child(3) {
-    grid-column: 2; /* En la segunda columna */
-    grid-row: 1 / span 2; /* Ocupará más espacio vertical */
-    align-self: center;
-    justify-self: start;
-    transform: translateY(-20%);
-    margin-top: 150px;
+    height: 400px; /* Altura fija para todas las tarjetas */
+    overflow: hidden;
+    object-fit: cover;
+    flex-grow: 1;
 }
 
 .project-card:hover {
@@ -55,18 +41,21 @@
 }
 
 .project-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100%;
+    text-align: center;
+    padding: 10px 0;
+    overflow: hidden;
+    object-fit: cover;
 }
 
 .project-image {
     width: 100%; /* Imagen ocupa todo el ancho */
-    height: 70%;
-    min-height: 250px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 10px; /* Bordes redondeados para estética */
+    display: block;
 }
 
 .category {
@@ -80,6 +69,13 @@
     font-size: 18px;
     font-weight: bold;
     margin-top: 5px;
+    text-align: center;
+}
+.project-card-content {
+    flex-grow: 1; /* Controla el espacio del texto */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* Responsividad */
@@ -90,34 +86,32 @@
         line-height: 80px;
         text-align: center;
     }
-    .project-card:nth-child(3) {
-        grid-row: auto; /* Restablecemos para evitar que ocupe más espacio */
-        transform: translateY(0); /* Eliminamos el desplazamiento */
-        margin-top: 0px;
-    }
     .projects-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 90%;
         max-width: 600px;
-        margin: 0 auto;
         gap: 20px; /* Reduce el espacio entre las tarjetas */
-        padding: 20px 15px;
+    }
+    .title {
+        font-size: 16px; /* Reduce el tamaño del texto */
     }
 
     .project-card {
         width: 100%;
-        max-width: 300px;
+        max-width: 350px;
         overflow: hidden;
+        height: 400px;
         display: flex;
         flex-direction: column;
         padding-bottom: 15px; /* Espacio para evitar superposición */
+        object-fit: cover;
     }
 
     .project-card img {
         width: 100%;
-        height: 200px; /* Ajusta para que todas tengan la misma altura */
+        height: 250px; /* Ajusta para que todas tengan la misma altura */
         object-fit: cover;
     }
 
@@ -128,11 +122,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        object-fit: cover;
     }
 }
 @media (max-width: 375px) {
     .projects-container {
-        grid-template-columns: 1fr; /* Asegura columna única */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 15px;
     }
     .projects {
@@ -144,9 +141,20 @@
 
     .project-card {
         min-width: 100%; /* Aún más pequeño */
-        padding: 10px;
+        max-width: 350px;
+        padding: 0;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        overflow: hidden;
+        /* object-fit: cover; */
     }
     .project-image {
         max-width: 100%;
+        height: 250px;
+        object-fit: cover;
+        display: block;
     }
 }

@@ -16,7 +16,7 @@ const Conteiner = () => {
             </div>
             <div className='img-container'>
                 <div className='circle-background'>
-                    <img className='img1' src="/perfilmio5.png" alt="img profile" />
+                    <img className='img1' src="/postaperfil.png" alt="img profile" />
                 </div>
             </div>
         </div>

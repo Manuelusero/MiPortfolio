@@ -23,12 +23,9 @@
 }
 @media (max-width: 375px) {
     .loader-container {
-        font-size: 1.2rem; /* Reducir el tamaño del texto */
-        padding: 0 10px; /* Menos padding */
-    }
-
-    .typing-effect {
-        border-right: 2px solid white; /* Más delgado el cursor */
-        padding-right: 3px;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
     }
 }

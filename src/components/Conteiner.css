@@ -76,7 +76,7 @@
 /* ======== CÍRCULO DETRÁS DE LA IMAGEN ======== */
 .circle-background {
     position: absolute;
-    width: 640px;
+    width: 670px;
     height: 467px;
     background-color: #527c1d;
     border-top-left-radius: 370px;
@@ -89,12 +89,12 @@
 
 /* ======== IMAGEN DE PERFIL ======== */
 .img1 {
-    width: 60%;
+    width: 56%;
     height: auto;
     object-fit: cover;
     position: relative;
     z-index: 1;
-    margin-top: -29px;
+    margin-top: -22px;
     margin-left: 100px;
 }
 
@@ -199,7 +199,8 @@
     }
 
     .img1 {
-        width: 186px;
+        width: 175px;
+        margin-top: 1px;
     }
 
     .img-container {
@@ -210,6 +211,7 @@
 
     .circle-background {
         width: 240px;
-        height: 210px;
+        height: 229px;
+        margin-top: 5px;
     }
 }

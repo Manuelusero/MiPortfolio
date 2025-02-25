@@ -10,7 +10,7 @@ const projects = [
 
     },
     {
-        title: "Replica de frontend de whatsapp",
+        title: " Frontend de whatsapp",
         category: "Desarrollo de frontend con react",
         link: "https://clonemsguserdeish24.netlify.app",
         image: "/whatsapp2.jpeg",
@@ -18,7 +18,7 @@ const projects = [
 
     {
         title: "Proyecto GreenRouse",
-        category: "Desarrollo con HTML y CSS , proximamente React",
+        category: " HTML, CSS y Proximamente React",
         link: "#",
         image: "/proyectGreen.jpeg",
     },

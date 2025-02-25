@@ -1,17 +1,25 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import "./Loader.css";
 
 const Loader = ({ onFinish }) => {
-    useEffect(() => {
-        console.log("⏳ Loader iniciado...");
-        const timeout = setTimeout(() => {
-            console.log("✅ Tiempo completado, llamando a onFinish...");
-            onFinish(); // Aseguramos que se llama correctamente
-        }, 3000); // Espera 3 segundos tras iniciar
+    const [showLoader, setShowLoader] = useState(true);
 
-        return () => clearTimeout(timeout); // Limpiamos para evitar errores
+    useEffect(() => {
+        if (window.innerWidth <= 375) {
+            setShowLoader(false);
+            onFinish();
+            return;
+        }
+
+        const timeout = setTimeout(() => {
+            onFinish();
+        }, 3000);
+
+        return () => clearTimeout(timeout);
     }, [onFinish]);
+
+    if (!showLoader) return null;
 
     return (
         <div className="loader-container">

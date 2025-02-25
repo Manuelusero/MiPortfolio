@@ -1,3 +1,8 @@
+#contact {
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
 .contact {
     font-family: var(--fonts-gral);
     font-size: 64px;
@@ -19,7 +24,7 @@
     line-height: 1.8;
     color: #e0e0e0;
     max-width: 900px;
-    margin-left: 90px;
+    margin-left: 85px;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -31,6 +36,7 @@
         align-items: center;
         text-align: center;
         padding: 20px;
+        padding-bottom: 50px;
         max-width: 600px;
         margin: 0 auto;
     }
@@ -56,6 +62,7 @@
     #contact {
         max-width: 90%;
         padding: 15px;
+        padding-bottom: 50px;
     }
 
     .contact {
