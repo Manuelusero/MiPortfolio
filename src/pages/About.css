@@ -63,7 +63,8 @@
 @media (max-width: 480px) {
     .About {
         font-size: 28px;
-        margin-left: 70px;
+        text-align: left;
+        margin: 0, auto;
     }
 
     .parent-container {

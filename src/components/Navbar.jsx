@@ -11,7 +11,7 @@ const Navbar = () => {
         <nav className="navbar">
             {/* Links normales en pantallas grandes */}
             <div className="links">
-                <a href="#home" className="link">INICIO</a>
+                <a href="#projects" className="link">PROYECTOS</a>
                 <a href="#about" className="link">SOBRE MÍ</a>
                 <a href="#contact" className="link">CONTACTO</a>
             </div>
@@ -36,7 +36,7 @@ const Navbar = () => {
 
             {/* Menú lateral (solo en móviles) */}
             <div className={`dropdown-menu ${menuOpen ? "show" : ""}`}>
-                <a href="#home" className="link" onClick={() => setMenuOpen(false)}>INICIO</a>
+                <a href="#projects" className="link" onClick={() => setMenuOpen(false)}>PROYECTOS</a>
                 <a href="#about" className="link" onClick={() => setMenuOpen(false)}>SOBRE MÍ</a>
                 <a href="#contact" className="link" onClick={() => setMenuOpen(false)}>CONTACTO</a>
             </div>

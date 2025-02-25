@@ -3,16 +3,16 @@ import { Typewriter } from "react-simple-typewriter";
 import "./Loader.css";
 
 const Loader = ({ onFinish }) => {
-    const [showLoader, setShowLoader] = useState(true);
+    const [showLoader, setShowLoader] = useState(window.innerWidth >= 1400);
 
     useEffect(() => {
-        if (window.innerWidth <= 375) {
-            setShowLoader(false);
+        if (window.innerWidth <= 1400) {
             onFinish();
             return;
         }
 
         const timeout = setTimeout(() => {
+            setShowLoader(false);
             onFinish();
         }, 3000);
 
