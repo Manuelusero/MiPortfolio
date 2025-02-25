@@ -151,12 +151,12 @@
     }
 
     .img1 {
-        width: 78%;
+        width: 62%;
         height: auto;
         object-fit: cover;
         position: relative;
         z-index: 1;
-        margin-top: -30px;
+        margin-top: -12px;
         margin-left: 0px;
     }
 
@@ -168,7 +168,8 @@
 
     .circle-background {
         width: 300px;
-        height: 270px;
+        height: 230px;
+        margin-top: 30px;
     }
     .cv-button {
         margin-top: 20px; /* Agregar espacio para que no lo tape la imagen */

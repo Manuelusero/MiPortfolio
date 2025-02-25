@@ -10,7 +10,7 @@ const Conteiner = () => {
                 <p className='description'>
                     Apasionado por la tecnología y la creación de soluciones digitales. Me encanta aprender, innovar y enfrentar nuevos desafíos en el mundo del desarrollo.
                 </p>
-                <a href="/mi-cv.pdf" target="_blank" rel="noopener noreferrer" className='cv-button'>
+                <a href="/CVspanish.pdf" download="CVspanish.pdf" className='cv-button'>
                     Curriculum
                 </a>
             </div>

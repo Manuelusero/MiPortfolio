@@ -72,7 +72,7 @@
     text-align: center;
 }
 .project-card-content {
-    flex-grow: 1; /* Controla el espacio del texto */
+    flex-grow: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -81,10 +81,11 @@
 /* Responsividad */
 @media (max-width: 768px) {
     .projects {
-        font-size: 48px; /* Título más pequeño */
-        margin-left: 20px;
+        font-size: 36px;
+        margin-left: 30px;
         line-height: 80px;
-        text-align: center;
+        text-align: left;
+        margin-bottom: -10px;
     }
     .projects-container {
         display: flex;
@@ -92,7 +93,7 @@
         align-items: center;
         width: 90%;
         max-width: 600px;
-        gap: 20px; /* Reduce el espacio entre las tarjetas */
+        gap: 20px;
     }
     .title {
         font-size: 16px; /* Reduce el tamaño del texto */
